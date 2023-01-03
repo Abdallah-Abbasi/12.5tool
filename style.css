@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    position: relative;
+    margin-top: 5rem;
+}
+.span {
+    color: blue;
+    position: relative;
+}
+
+.span::before {
+    position: absolute;
+        top: -2.5rem;
+        height: 30px;
+        width: 100px;
+        background: black;
+        content: attr(data-tooltip);
+    scale: 0;
+}
+.span:hover::before {
+    scale: 1;
+}
